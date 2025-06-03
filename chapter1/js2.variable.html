@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+</head>
+<body>
+    <p id="variable"></p>
+  <script>
+    /*let으로 변수 선언
+      필요에 따라 값 재할당 가능
+    */
+    let name = "강진호";
+    console.log(name);
+
+    name = "홍길동";
+    console.log(name);
+    
+    /*const로 변수 선언
+      재할당 불가능, 재할당시 오류
+      constant(상수) : 고정된 변수
+    */
+    const name1 = "강진호";
+    console.log(name1);
+    
+    //name1 = "홍길동"; // 콘솔에서 오류 발생
+    console.log(name1); 
+
+    /*
+      ① 변수 이름에는 영어 알파벳, 숫자, 밑줄(_), $를 사용할 수 있습니다.
+      ② 변수 이름은 숫자로 시작하면 안됩니다.
+      ③ 변수에서는 동일한 알파벳의 대문자와 소문자는 서로 다른 것입니다. 예를 들어 변수 Price와 price는 서로 다른 변수입니다.
+      ④ 변수 이름을 길게 지을 경우에는 밑줄(_)이나 캐멀 케이스(CamelCase)가 사용됩니다.
+    */
+
+    const a = 5;
+    const font1 = "돋움";
+    let _price = 300000;
+    let max_width = 600;
+    let maxWidrh = 800;
+
+    document.write(a + "<br>");
+    document.write(font1 + "<br>");
+    document.write(_price + "<br>");
+    document.write(max_width + "<br>");
+    document.write(maxWidrh + "<br>");
+
+  </script>
+</body>
+</html>
+
+
+
