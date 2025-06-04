@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+</head>
+<body>
+    <p id="operator"></p>
+  <script>
+    // 사칙연산
+    let x = 10, y = 20;
+    let z;
+    z = x + y * 5 / 2;
+    console.log(z);
+
+    // 나머지 연산자
+    let a = 10, b = 20;
+    let c, d, e;
+    c = a % 2;
+    d = b % 3;
+    e = 3 % a;
+    console.log(c);
+    console.log(d);
+    console.log(e);
+
+    // 거듭제곱 연산자, 증감연산자
+    let m = 3, n = 5;
+    let l, k, j;
+    l = m**3;   // 27
+    l++;    // 28
+    l = l +3;   // 31
+    l--;    // 30
+    l = m + n + l;      //38  
+    console.log(l);
+
+    // 문자열 연결 연산자
+    let name = "강진호";
+    let age = "37";
+    let text1, text2;
+    text1 = "이름: " + name;
+    text2 = "나이: " + age;
+    console.log(text1);
+    console.log(text2);
+
+    // <table> 태그 적용
+    let title = "제목";
+    let price = 300;
+    let text = "";
+    
+    text = text + "<table border = '1'>";
+    text = text + "<tr><th>이름</th><th>가격</th></tr>";
+    text = text + "<tr><td>" + title + "</td><td>" + price + "</th></tr>";
+    
+    document.write(text);
+
+    // 할당 연산자
+    let aa = 10, bb = 20, cc = 30, dd = 40, ee = 50;
+    let ff = "안녕";
+
+    aa += 3;    // 13
+    bb -= 8;    // 12 
+    cc *= 2;    // 60
+    dd /= 10;   // 4
+    ee %= 6;    // 2
+    ff += "하세요."     // 안녕하세요 
+
+    console.log(aa);
+    console.log(bb);
+    console.log(cc);
+    console.log(dd);
+    console.log(ee);
+    console.log(ff);
+
+    // 문자열 할당 연산자 적용
+    let title1 = "제목";
+    let price1 = 300;
+    let text11 = "";
+    
+    text11 += "<table border = '1'>";
+    text11 += "<tr><th>이름</th><th>가격</th></tr>";
+    text11 += "<tr><td>" + title1 + "</td><td>" + price1 + "</th></tr>";
+    
+    document.write(text);
+
+    // 비교 연산자
+    let aaa = 3;
+    let bbb = "3";
+    let ccc = 5;
+    let ddd = 3;
+
+    console.log(aaa == bbb);
+    console.log(aaa === bbb);
+    console.log(aaa != bbb);
+    console.log(aaa !== bbb);
+    console.log(aaa > ccc);
+    console.log(aaa < ccc);
+    console.log(aaa >= ccc);
+    console.log(aaa <= ddd);
+
+    // 논리 연산자 &&, ||, !
+
+
+  </script>
+</body>
+</html>
+
+
+
