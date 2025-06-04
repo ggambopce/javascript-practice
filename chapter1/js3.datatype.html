@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+</head>
+<body>
+    <p id="datatype"></p>
+  <script>
+    //숫자 
+    let a = 3; // 정수
+    let b = 5.3; // 부동 소수점 숫자
+    let c = 123e3; //123000
+    let d = 123e-3; // 0.123
+
+    //Bigint : 16개 이상의 정수
+    let aa = 99999999999999;
+    let bb = 999999999999999; // 16개 이상은 부정확
+    let cc = 999999999999999n; // Bigint 정수 끝에 n
+
+    /*문자열
+        공백도 하나의 문자이다.
+        문자열 안에 "를 사용할 떄는 \ 이스케이프 문자를 사용한다.
+        \n : 문자열 내에서 줄바꿈을 나타내는 제어 문자
+        HTML 줄바꿈 태그는 <br>
+    */
+    let text1 = "사과";
+    let text2 = '오렌지';
+    let text = "안녕하세요. \n반갑습니다."
+    let text3 = "🚩" // 유니코드 특수문자 사용가능
+
+    // 템플릿 문자열
+    let name = "강진호";
+    let age = 30;
+
+    let textt = "이름: " + name + ", 나이: " + age;
+    let textt1 = `이름: ${name}, 나이: ${age}`;
+    
+    document.write(textt + "<br>");
+    document.write(textt1 + "<br>");
+
+    // 불리언
+    let x = 5 > 3;
+    let y = 5 < 3;
+     document.writeln(x + "<br>");
+     document.write(y + "<br>");
+
+    // Undedined, Null
+    let z; // 초기화 되지 않은 변수는 undefined
+    document.writeln(z + "<br>");
+    document.write(typeof z);
+
+    let m = ""; // Null은 빈문자열 이므로 string
+    document.writeln(m + "<br>");
+    document.write(typeof m);
+
+    // 객체 : 키:값
+    const member = {id: "ggambo", name: "강진호", age: 37}
+    document.write(member.id + "<br>");
+    document.write(member.name + "<br>");
+    document.write(member.age + "<br>");
+
+    // 배열
+    const car = ["테슬라", "현대", "기아"];
+    
+    document.write(car[0] + "<br>");
+    document.write(car[1] + "<br>");
+    document.write(car[2] + "<br>");
+
+    // 심볼 : 다른 코드나 라이브러리와 프로퍼티 이름이 충돌하는 것을 막기 위한 목적.
+
+  </script>
+</body>
+</html>
+
+
+
