@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+</head>
+<body>
+    <p id="switch"></p>
+  <script>
+   // 사칙연산 프로그램
+   let num1 = 10;
+   let num2 = 20;
+   let operator = "/";
+
+   switch(operator) {
+        case "+" :
+            result = num1 + num2;
+            alert(num1 + "+" + num2 + "=" + result );
+            break;
+        case "-" :
+            result = num1 - num2;
+            alert(num1 + "-" + num2 + "=" + result );
+            break;
+        case "*" :
+            result = num1 * num2;
+            alert(num1 + "*" + num2 + "=" + result );
+            break;
+        case "/" :
+            result = num1 / num2;
+            alert(num1 + "/" + num2 + "=" + result );
+            break;    
+        defalut:
+            alert("입력오류");
+            break;
+   }
+  </script>
+</body>
+</html>
+
+
+
