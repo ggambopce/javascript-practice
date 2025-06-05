@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+</head>
+<body>
+    <p id="ifStatement"></p>
+  <script>
+    // 65세 이상이면 입장료가 무료
+    let x = 10000; // 입장료
+    let age = 67;
+
+    if (age > 65) x = 0;
+
+    console.log(x);
+
+    // 짝수,홀수 판별하기
+    let num = 7;
+
+    if (num%2 == 0) {
+        console.log(num + "은 짝수 입니다.");
+    } else {
+        console.log(num + "은 홀수 입니다.")
+    }
+
+    // 학점 계산하기
+    let score = 30;
+
+    if (score >= 90) {
+        grade = "A";
+    } else if (score >= 80) {
+        grade = "B"
+    } else if (score >= 70) {
+        grade = "C"
+    } else if (score >= 60) {
+        grade = "D"
+    } else {
+        grade = "F"
+    }
+    console.log(grade);
+  </script>
+</body>
+</html>
+
+
+
