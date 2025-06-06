@@ -11,6 +11,34 @@
         console.log("안녕")
         i++;
     }
+
+    // while문으로 1~10 합계 구하기
+    let sum = 0;
+    let ii = 1;
+    while (ii <= 10){
+        sum += ii;
+        ii++
+    }
+    console.log("합계: " + sum);
+
+    // do while문
+    let x = 10;
+    do {
+        console.log("안녕");
+    } while (x > 10);
+
+    // break문
+    for (let iii = 1; iii <= 10; iii++) {
+        if(iii == 4)
+        break;
+        console.log(iii);
+    }
+    // continue문
+    for (let j = 1; j <= 10; j++) {
+        if(j == 4)
+        continue;
+        console.log(j);
+    }
   </script>
 </body>
 </html>
