@@ -7,9 +7,69 @@
     <p id="for"></p>
   <script>
     // For문으로 '안녕' 세번 출력하기
+    for(let i=1; i<=3; i++) {
+        console.log("안녕")
+    }
+
+    // for문으로 1~10 정수 추출하기
+    for (let i = 1; i <= 10; i++) {
+        console.log(i);
+    }
+
+    // for문으로 1~10 합계 구하기
+    let sum = 0;
+    for (let i = 1; i <= 10; i++) {
+        sum += i; 
+    }
+    console.log(sum);
+
+    // for문으로 1~100짝수 구하기
+    let sum1 = 0;
+
+    // for문으로 글자에 색 입히기
+    const color = ["red", "green", "blue", "pink"];
+    let text = "";
+    
+    for (let i = 0; i <= 3; i++) {
+        text += `<span style='color:${color[i]}'>안녕</span><br>`;
+    }
+    document.write(text);
+
+    // 인치/센티미터 환산표 만들기
+    let inch;
+    let cm;
+    console.log("인치 센티미터");
+    for (inch = 1; inch <= 5 ; inch++) {
+        cm = inch * 2.54;
+        cm = cm.toFixed(2); // 소수 점 둘째 자리
+        console.log(cm);
+    }
+
+    // for in문 객체의 요소들을 반복해서 읽어올때 사용
+    const member = {id: "ggambo", name: "강진호", age: 37};
+
+    for (let x in member) {
+        console.log(member[x]);
+    }
+
+    //for of문 배열이나 문자열 같이 반복가능한 데이터 형에 있는 요소들을 읽어올때 사용\
+    const scores = [88, 75, 95, 78, 90];
+    for (let score of scores) {
+        console.log(score);
+    }
+    // for of문 문자열 적용
+    let str1 = "javascript";
+    for (let x of str1) {
+        console.log(x);
+    }
+
+    // 이중 for문
+    for (x = 2; x <= 9; x++) {
+        for (y = 1; y <= 9; y++) {
+            console.log( x + " * " + y + " = " + (x*y) );
+        };
+    };
+
   </script>
 </body>
 </html>
-
-
-
