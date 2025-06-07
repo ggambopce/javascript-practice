@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+</head>
+<body>
+    <p id="parameter"></p>
+  <script>
+   // 매개변수의 기본 값
+   function addFunc(a, b=5) {
+        return a + b
+   }
+   console.log(addFunc(10));
+   // 매개변수와 인수의 개수가 같은 경우
+   console.log(addFunc(10,20));
+
+   /* 나머지 매개변수 사용
+    scores는 Array로 만들어지고, 넘겨진 값들이 배열에 들어간다.
+    나머지 매개변수는 항상 마지막에 위치해야 한다.
+   */
+   function sumScores(...scores) {
+    let sum = 0;
+    for (let score of scores) {
+        sum += score;
+    }
+    return sum;
+   }
+   result = sumScores(60,80,90,100);
+   console.log(result);
+
+   // arguments 객체를 사용하여 최대값 구하기
+   function maxScores() {
+    let max = -Infinity;
+    for (let i = 0; i < arguments.length; i++) {
+        if(arguments[i] > max) {
+            max = arguments[i];
+        }
+    }
+    return max;
+   }
+
+   result = maxScores(87, 79, 93);
+   console.log(result);
+
+  </script>
+</body>
+</html>
+
+
+
