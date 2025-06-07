@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+</head>
+<body>
+    <p id="function"></p>
+  <script>
+    // 사용자 함수 정의와 호출
+    function hello() {
+        console.log("안녕하세요");
+    }
+
+    hello();
+    hello();
+
+    // 함수의 매개변수와 반환 값 사용
+    function circleArea(r) {
+        let result = r*r*3.14;
+        return result;
+    }
+
+    let radius = 8;
+    let area;
+    area = circleArea(radius);
+    console.log(area);
+
+    // 함수를 이용한 섭씨/화씨 변환
+    function c2f(c) {
+        let f = (c *1.8) + 32;
+        return f;
+    }
+    let c,f;
+    for( c = -10; c <= 5; c++) {
+        console.log(c, c2f(c));
+    }
+
+  </script>
+</body>
+</html>
+
+
+
