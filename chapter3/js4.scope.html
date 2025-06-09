@@ -4,43 +4,45 @@
   <meta charset="UTF-8" />
 </head>
 <body>
-    <p id="parameter"></p>
+    <button onclick="incCounter()">+</button>
+    <p id="scope"></p>
   <script>
-   // 매개변수의 기본 값
-   function addFunc(a, b=5) {
-        return a + b
-   }
-   console.log(addFunc(10));
-   // 매개변수와 인수의 개수가 같은 경우
-   console.log(addFunc(10,20));
-
-   /* 나머지 매개변수 사용
-    scores는 Array로 만들어지고, 넘겨진 값들이 배열에 들어간다.
-    나머지 매개변수는 항상 마지막에 위치해야 한다.
-   */
-   function sumScores(...scores) {
-    let sum = 0;
-    for (let score of scores) {
-        sum += score;
+    // 전역 변수
+    let x = 10;
+    function func() {
+        console.log(x);
     }
-    return sum;
-   }
-   result = sumScores(60,80,90,100);
-   console.log(result);
+    func();
+    console.log(x);
 
-   // arguments 객체를 사용하여 최대값 구하기
-   function maxScores() {
-    let max = -Infinity;
-    for (let i = 0; i < arguments.length; i++) {
-        if(arguments[i] > max) {
-            max = arguments[i];
+    // 지역 변수
+    function func1() {
+        let y = 9;
+        console.log(y);
+    }
+    func1();
+    //console.log(y); // 정의 되지 않아 오류
+
+    // 블록 스코프
+    function func2() {
+        if(true) {
+            let z = 3;
         }
+        //console.log(z); // 블록 내부에서만 사용가능 오류
     }
-    return max;
-   }
+    func2();
 
-   result = maxScores(87, 79, 93);
-   console.log(result);
+    /* 클로저
+      클로저는 함수가 외부 함수의 실행 컨텍스트(스코프)에 접근할 수 있도록 기억하는 기능이다.  
+      내부 함수가 외부 함수의 변수에 접근할 수 있고, 그 변수를 기억하고 계속 사용할 수 있는 상태"를 말한다.
+    */
+    const incCounter = (() => {
+        let counter = 0;
+        return () => {
+            counter += 1;
+            document.getElementById("scope").innerHTML = counter;
+        };
+    }) ();
 
   </script>
 </body>
