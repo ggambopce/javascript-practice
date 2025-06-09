@@ -5,7 +5,10 @@
 </head>
 <body>
     <button onclick="incCounter()">+</button>
+    <button type="button" onclick="changeColor()">색상변경</button>
+    <div id="box" style="width: 100px; height: 100px; background-color: green;"></div>
     <p id="scope"></p>
+    <p id="show"></p>
   <script>
     // 전역 변수
     let x = 10;
@@ -35,6 +38,7 @@
     /* 클로저
       클로저는 함수가 외부 함수의 실행 컨텍스트(스코프)에 접근할 수 있도록 기억하는 기능이다.  
       내부 함수가 외부 함수의 변수에 접근할 수 있고, 그 변수를 기억하고 계속 사용할 수 있는 상태"를 말한다.
+      부모 함수가 종료된 후에도 부모 스코프에 접근할 수 있는 기능을 가지는 함수이다.
     */
     const incCounter = (() => {
         let counter = 0;
@@ -44,6 +48,22 @@
         };
     }) ();
 
+    // 클로저 활용
+    const box = document.getElementById("box");
+
+    const change = (function() {
+        let toggle = false;
+        return function() {
+            box.style.backgroundColor = toggle ? 'blue' : 'red';
+            toggle = !toggle;
+            return toggle;
+        }
+    })();
+
+    function changeColor() {
+        document.getElementById("show").innerHTML = change();
+    }
+        
   </script>
 </body>
 </html>
