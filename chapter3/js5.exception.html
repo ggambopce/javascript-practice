@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+</head>
+<body>
+    <h3>0~9 숫자가 입력되었는지 체크하기</h3>
+    <input id="input1" type="text" ><span id="show"></span><br>
+    <button onclick="checkInput()">확인</button>
+    <p id="exception"></p>
+  <script>
+    // try-catch
+    try {
+        alertttt("안녕하세요");
+        document.write("test");
+    } catch(err) {
+        document.getElementById("exception").innerHTML = err.message;
+    }
+
+    // try-catch문으로 입력창 체크하기
+    function checkInput() {
+        let input_elem = document.getElementById("input1");
+        let a = input_elem.value;
+        document.getElementById("show").innerHTML = "";
+
+        try {   
+            if (a == "") throw "비어있습니다.";
+            if (isNaN(a)) throw "숫자가 아닙니다.";
+            a = Number(a);
+            if(a<0 || a>9) throw "0~9 사이 숫자가 아닙니다.";
+        } catch(err) {
+            document.getElementById("show").innerHTML = "오류: " + err;
+        }
+        // try-catch-finally
+        finally {
+            input_elem.value = "";
+        }
+    }
+  </script>
+</body>
+</html>
