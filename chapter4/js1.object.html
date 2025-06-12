@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+</head>
+<body>
+    <p id="object"></p>
+  <script>
+    // 객체 생성
+    const member = {
+        id: "ggambo",
+        name: "강진호",
+        age : 37
+    }
+    let text;
+    text = member.id + " " + member.name + " " + member.age
+    document.getElementById("object").innerHTML = text;
+
+    // 대괄호 이용하여 프로퍼티 읽기
+    const score = {
+        kor : 80,
+        eng : 90,
+        math : 100 
+    }
+    let sum, avg;
+    sum = score["kor"] + score["eng"] + score["math"];
+    avg = sum/3
+    console.log(sum, avg);
+  </script>
+</body>
+</html>
