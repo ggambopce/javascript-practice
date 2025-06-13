@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+</head>
+<body>
+    <p id="constructor"></p>
+  <script>
+    // 생성자 함수의 객체 생성
+    function Member(id, name, age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        // 생성자 함수에서 메서드 사용
+        this.getName = function() {
+            return this.name;
+        };
+    };
+
+    const mem1 = new Member("ggambo", "강진호", 37);
+    const mem2 = new Member("suk", "김수경", 42);
+
+    let text = "";
+    text += mem1.name;
+    text += mem2.id;
+    text += mem1.getName();
+    document.getElementById("constructor").innerHTML = text;
+
+    
+
+  </script>
+</body>
+</html>
