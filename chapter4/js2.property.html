@@ -14,6 +14,8 @@
    }
    //객체에 프로퍼티 추가하기
    member.email = "ggambopce@gmail.com";
+   // 객체에서 프로퍼티 삭제하기
+   delete member.id;
 
    let text = "";
    for (x in member) {
@@ -21,6 +23,17 @@
    }
 
    document.getElementById("property").innerHTML = text;
+
+   // 중첩된 객체
+   const obj1 = {
+    id: "ggambo",
+    name: "강진호",
+    hobby: {
+        hobby1: "게임",
+        hobby2: "농구"
+    }
+   }
+   
 
 
   </script>

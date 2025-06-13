@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+</head>
+<body>
+    <p id="method"></p>
+  <script>
+    // 객체에 메서드 사용
+    const cat = {
+        name: "롵키",
+        species: "랙돌",
+        color: "흰색",
+        intro: function(){
+            return "나의 이름은 " + this.name + "입니다."
+        }
+    }
+    // 메서드 추가하기
+    cat.getColor = function() {
+            return "색깔은 " + cat.color + "입니다."
+    
+    }
+    document.getElementById("method").innerHTML = cat.intro() + cat.getColor();
+    
+    // 내장 메서드
+    let x = 12.3423;
+    console.log(x.toFixed(3));
+    let str1 = "I am a student.";
+    console.log(str1.toUpperCase());
+
+  </script>
+</body>
+</html>
