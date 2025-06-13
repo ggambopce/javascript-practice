@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+</head>
+<body>
+    <p id="property"></p>
+  <script>
+    // for in문으로 프로퍼티 읽기
+   const member = {
+    id: "ggambo",
+    name: "강진호",
+    age: 37
+   }
+   //객체에 프로퍼티 추가하기
+   member.email = "ggambopce@gmail.com";
+
+   let text = "";
+   for (x in member) {
+    text += member[x] + "<br>";
+   }
+
+   document.getElementById("property").innerHTML = text;
+
+
+  </script>
+</body>
+</html>
