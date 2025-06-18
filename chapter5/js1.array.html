@@ -6,7 +6,22 @@
 <body>
     <p id="array"></p>
   <script>
-    
+    // 배열의 생성
+    const fruits = ["사과", "딸기", "참외"];
+    let text = "";
+    text += fruits + "<br>";
+    text += fruits[0] + "<br>";
+    text += fruits[1] + "<br>";
+    text += fruits[2];
+    document.getElementById("array").innerHTML = text;
+
+    // 배열의 생성2
+    const fruits2 = new Array("오렌지", "사과", "딸기", "참외");
+    console.log(fruits2);
+
+    // 배열 요소 값의 변경
+    fruits[0] = "수박";
+    console.log(fruits);
   </script>
 </body>
 </html>
