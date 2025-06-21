@@ -22,6 +22,21 @@
     // 배열 요소 값의 변경
     fruits[0] = "수박";
     console.log(fruits);
+
+    // 배열과 객체의 차이
+    const member1 = ["강진호", "010-2392-2932", 30]; // 배열
+    const member2 = {name: "강진호", phone:"010-2922-2934", age:30} // 객체
+    console.log(typeof member1);
+    console.log(typeof member2);
+    console.log(member1[0]);
+    console.log(member2.name);
+
+    // 배열요소 반복 읽기
+    const fruits3 = ["사과", "딸기", "참외"];
+    for (let i = 0; i < fruits3.length; i++) {
+      console.log(fruits3[i]);
+    }
+
   </script>
 </body>
 </html>
